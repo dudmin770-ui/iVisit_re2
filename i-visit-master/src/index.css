@@ -1,0 +1,47 @@
+@import url('./fonts.css');
+@import 'tailwindcss';
+
+@theme {
+  --font-tomorrow: Tomorrow, sans-serif;
+  --color-dark-gray: #272727;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 9999px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b rgba(255, 255, 255, 0.03);
+}
+
+/* Make only ScanIdPage's three selects more compact */
+.scanid-compact-select > div {
+  padding: 0.25rem 0.5rem !important; /* was px-4 py-2 */
+  font-size: 0.875rem !important;     /* text-sm-ish */
+  min-height: 2rem !important;
+}
+
+/* Also shrink the dropdown menu items for these selects */
+.scanid-compact-select ul li {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.875rem !important;
+}
